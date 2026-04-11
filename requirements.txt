@@ -1,0 +1,16 @@
+matplotlib>=3.9
+numpy>=2.0
+pandas>=2.2
+PyYAML>=6.0
+requests>=2.32
+scikit-learn>=1.5
+scipy>=1.11
+seaborn>=0.13
+
+# Required only for OpenAI Responses API provider
+openai>=1.50
+
+# Required only for local HuggingFace generation
+# transformers>=4.45
+# accelerate>=0.34
+# torch>=2.4

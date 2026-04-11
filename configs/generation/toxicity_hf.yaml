@@ -1,0 +1,33 @@
+# Example: generate toxicity perspective-taking annotations with a local HuggingFace model.
+# Usage:
+#   python scripts/run_toxicity.py \
+#     --config configs/generation/toxicity_hf.yaml \
+#     --runtime-config configs/runtime/huggingface_cluster.yaml \
+#     --model qwen3.5:0.8b
+
+experiment:
+  name: toxicity_female_hf
+  experiment_group: generated
+  prompt_mode: levels          # options: question, definition, levels, examples
+  target_groups:
+    - female                   # options: female, male, non-binary people
+
+model:
+  name: qwen3.5:0.8b           # overridden by --model flag
+  temperature: null            # null → provider applies family defaults
+  top_p: null
+  max_tokens: null
+  reasoning_enabled: false
+  extra_body: {}
+
+generation:
+  n_generations: 10            # number of independent annotations per comment
+  generation_concurrency: 1    # HF models run single-threaded
+  max_retry: 3
+  retry_sleep_seconds: 1
+  request_sleep_seconds: 0
+  test_mode: false
+  test_item_count: 2           # only used when test_mode: true
+
+output:
+  path: data/llm_annotations/toxicity_detection/generated/toxicity_female_hf.jsonl

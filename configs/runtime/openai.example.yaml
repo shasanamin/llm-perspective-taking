@@ -1,0 +1,5 @@
+provider:
+  kind: openai_responses
+  api_key: ${OPENAI_API_KEY}
+  timeout_seconds: 120
+  base_url: null

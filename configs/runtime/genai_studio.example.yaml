@@ -1,0 +1,10 @@
+# Runtime config for any OpenAI-compatible endpoint (e.g., Ollama, vLLM, GenAI Studio).
+# Set GENAI_API_URL and GENAI_API_KEY in your environment before use.
+
+provider:
+  kind: openai_compatible
+  api_url: ${GENAI_API_URL}       # e.g., http://localhost:11434/v1/chat/completions
+  api_key: ${GENAI_API_KEY}
+  timeout_seconds: 90
+  headers: {}
+  default_body: {}

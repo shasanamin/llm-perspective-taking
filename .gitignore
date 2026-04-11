@@ -1,0 +1,10 @@
+# OS / editor artifacts
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+.matplotlib/
+# Runtime secrets (copy the .example.yaml files and fill in credentials)
+configs/runtime/local_*.yaml
+# Regenerated outputs (reproducible from bundled data via scripts/)
+results/

@@ -1,0 +1,8 @@
+provider:
+  kind: huggingface_local
+  hf_token: ${HF_TOKEN:-}
+  model_name: Qwen/Qwen3.5-0.8B
+  cache_dir: ${HF_HOME:-~/.cache/huggingface}
+  device_map: auto
+  torch_dtype: auto
+  trust_remote_code: true

@@ -1,0 +1,32 @@
+# Example: generate toxicity perspective-taking annotations with an API-based model.
+# Works with both OpenAI and OpenAI-compatible endpoints.
+# Usage:
+#   python scripts/run_toxicity.py \
+#     --config configs/generation/toxicity_api.yaml \
+#     --runtime-config configs/runtime/openai.example.yaml \
+#     --model gpt-5.4-nano
+
+experiment:
+  name: toxicity_nonbinary_api
+  experiment_group: generated
+  prompt_mode: levels          # options: question, definition, levels, examples
+  target_groups:
+    - non-binary people        # options: female, male, non-binary people
+
+model:
+  name: gpt-5.4-nano           # overridden by --model flag
+  temperature: 0.3
+  top_p: 0.9
+  max_tokens: 1024
+  reasoning_enabled: false
+  reasoning_effort: none       # options: none, low, medium, high (OpenAI only)
+  extra_body: {}
+
+generation:
+  n_generations: 10            # number of independent annotations per comment
+  generation_concurrency: 8    # API calls can be parallelized
+  max_retry: 5
+  retry_sleep_seconds: 5
+  request_sleep_seconds: 0
+  test_mode: false
+  test_item_count: 2           # only used when test_mode: true
