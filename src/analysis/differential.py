@@ -31,31 +31,6 @@ from src.utils.models import normalize_model_name, display_model_name
 
 TOXICITY_GROUPS = ["female", "male", "non-binary"]
 
-TOXICITY_LLM_MODELS = [
-    "gpt-5.1",
-    "gpt-5.1_reasoning=low",
-    "gpt-5.1_reasoning=medium",
-    "gpt-5.1_reasoning=high",
-    "gpt-4.1-mini",
-    "gpt-4.1-nano",
-    "gpt-oss:120b",
-    "gpt-oss:20b",
-    "deepseek-r1:1.5b",
-    "deepseek-r1:7b",
-    "deepseek-r1:14b",
-    "deepseek-r1:32b",
-    "gemma3:1b",
-    "gemma3:12b",
-    "gemma3:27b",
-    "qwen3:1.7b",
-    "qwen3:8b",
-    "qwen3:32b",
-    "qwen3-r:1.7b",
-    "qwen3-r:8b",
-    "qwen3-r:32b",
-    "qwen2.5:72b",
-]
-
 OUTPUT_ROOT = RESULTS_ROOT / "processed" / "differential_pt"
 
 

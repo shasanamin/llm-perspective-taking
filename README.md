@@ -2,8 +2,10 @@
 
 Code and data for the paper:
 
-> **From Fallback to Frontline: When Can LLMs be Superior Annotators of Human Perspectives?**
-> Hasan Amin, Harry Yizhou Tian, Xiaoni Duan, Chien-Ju Ho, Rajiv Khanna, Ming Yin
+> **From Fallback to Frontline: When Can LLMs be Superior Annotators of Human Perspectives?**  
+> Hasan Amin, Harry Yizhou Tian, Xiaoni Duan, Chien-Ju Ho, Rajiv Khanna, Ming Yin  
+> *Findings of Annual Meeting of the Association for Computational Linguistics (ACL), 2026*  
+> [[Paper]](https://arxiv.org/abs/2604.17968)
 
 We formalize **perspective-taking**—estimating how a demographic subgroup would collectively judge subjective content—as a statistical estimation problem. Through a bias–variance–correlation decomposition and experiments across various LLM configurations, datasets, and subgroups, we show that a single LLM estimate often rivals multiple direct human labels and identify clear regimes where LLMs excel or fall short.
 
@@ -155,7 +157,7 @@ See [`data/README.md`](data/README.md) for the full data layout.
 ## Citation
 
 ```bibtex
-@inproceedings{amin2025fallback,
+@inproceedings{amin2026fallback,
   title={From Fallback to Frontline: When Can LLMs be Superior Annotators of Human Perspectives?},
   author={Amin, Hasan and Tian, Harry Yizhou and Duan, Xiaoni and Ho, Chien-Ju and Khanna, Rajiv and Yin, Ming},
   booktitle={Findings of the Association for Computational Linguistics: ACL 2026},
